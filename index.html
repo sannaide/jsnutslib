@@ -1,0 +1,1431 @@
+<!doctype html>
+<html id="ie6" lang="it">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<title>My form</title>
+
+	<!-- chrome... -->
+	<!--<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/jsnutscalendar.css">-->
+
+	<!-- chrome... -->
+	<style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}button,input,select{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{cursor:pointer}[disabled]{cursor:default}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button:-moz-focusring,input:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}</style>
+	<style type="text/css">
+		.rTable {
+		  	display: block;
+		  	width: 40%;
+			z-index:20;
+		}
+		
+		.rTableRow2 {
+			clear:both;
+			width:100%;
+			border:1px solid black;
+			height:40px;
+			line-height:40px;
+			vertical-align:middle;
+			text-align:center;
+			z-index:20;
+		}
+		.rTableHead2, .rTableFoot2{
+			float:left;
+		  	background-color: #DDD;
+		  	font-weight: bold;
+			width:14.2%;
+			z-index:20;
+		}
+		.rTableCell2 {
+		  	float:left;
+		  	width:14.2%;
+			z-index:20;
+		}
+		.rTableRow3 {
+			clear:both;
+			width:100%;
+			border:1px solid black;
+			height:40px;
+			line-height:40px;
+			vertical-align:middle;
+			text-align:center;
+		  	background-color: #DDD;
+			z-index:20;
+		}
+	</style>
+
+	<style type="text/css">
+		#ie6 {
+			background-image: url(about:blank);
+			background-attachment: fixed;
+		}
+
+		html {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			height: 100%;
+			overflow-y: scroll;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			height: 100%;
+		}
+
+		v\:shape {
+			behavior: url(#default#VML);
+			display: inline-block;
+		}
+
+		v\:fill {
+			behavior: url(#default#VML);
+			display: inline-block;
+		}
+
+		v\:shadow {
+			behavior: url(#default#VML);
+			display: inline-block;
+		}
+
+		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+			color: lightgray;
+		}
+
+		.input_class {
+		        color: #CCC;
+			border: 1px solid #999;
+			padding: 10px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			font-size: 150%;
+			overflow: hidden;
+		}
+
+		.input_class.input_class_shadow {
+			box-shadow: 0px 5px 5px 0px #999;
+		}
+
+		.image_class {
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 3px 3px #999;
+		}
+
+		.input_class_ie {
+			position: relative;
+			z-index: 5;
+			color: #CCC;
+			border: 0;
+			margin: 10px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			font-size: 150%;
+			overflow: hidden;
+		}
+
+		.submit_class {
+			border: 1px solid #999;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			font-size: 150%;
+			padding: 10px;
+			color: black;
+			background-color: #CCC;
+			/*width: 100%;*/
+			cursor: pointer;
+		}
+
+		.submit_class_ie {
+			border: 0;
+			background-color: transparent;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			font-size: 150%;
+			padding: 10px;
+			color: black;
+			/*width: 100%;*/
+			cursor: pointer;
+		}
+
+		.button_class {
+			border: 1px solid #999;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			font-size: 150%;
+			/*padding: 10px;*/
+			color: black;
+			background-color: #CCC;
+			/*width: 100%;*/
+			cursor: pointer;
+		}
+
+		.button_class_ie {
+			border: 0;
+			background-color: transparent;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			font-size: 150%;
+			/*padding: 10px;*/
+			color: black;
+			/*width: 100%;*/
+			cursor: pointer;
+		}
+
+		input, input:focus {
+		        border-width: 1px;
+		        outline: 0;
+		}
+
+		button, button:focus {
+		        border-width: 1px;
+		        outline: 0;
+		}
+
+		.input_class.textarea_class {
+			overflow-y: auto;
+			resize: none;
+		}
+
+		.input_class_ie.textarea_class {
+			overflow-y: auto;
+			resize: none;
+		}
+
+		.column_header {
+			font-weight: bold;
+			font-size: 150%;
+		}
+
+		.glowing_border {
+			outline: none;
+			border-color: #9ECAED;
+			box-shadow: 0 0 10px #9ECAED;
+		}
+
+		.darkClass {
+		    background-color: black;
+		    filter: alpha(opacity=50);
+		    opacity: 0.5;
+		    -moz-opacity:0.50;
+		    z-index: 20;
+		    height: 100%;
+		    width: 100%;
+		    position: fixed;
+		    top: 0px;
+		    left: 0px;
+		}
+
+		.darkClass_ie6_7 {
+		    background-color: black;
+		    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+		    z-index: 20;
+		    height: 100%;
+		    width: 100%;
+		    position: absolute;
+		    top: 0px;
+		    left: 0px;
+		}
+
+		.popup {
+			position: fixed;
+			border: 1px solid black;
+			padding: 20px;
+			background: #fff;
+			border-radius: 5px;
+			left: 0px;
+			top: 0px;
+			z-index: 100;
+		}
+
+		.popup_ie6_7 {
+			position: absolute;
+			border: 0;
+			padding: 20px;
+			background: transparent;
+			border-radius: 5px;
+			left: 0px;
+			top: 0px;
+			z-index: 100;
+		}
+
+		.popup_ie8 {
+			position: fixed;
+			border: 0;
+			padding: 20px;
+			background: transparent;
+			border-radius: 5px;
+			left: 0px;
+			top: 0px;
+			z-index: 100;
+		}
+
+		.popup_title {
+			position: relative;
+			z-index: 100;
+			/*margin-bottom: 10px;*/
+		}
+
+		.popup_title h2 {
+			padding: 0px;
+			margin: 0px;
+			color: #333;
+			font-size: 30px;
+			font-family: Tahoma, Arial, sans-serif;
+		}
+
+		.close {
+			font-size: 30px;
+			font-weight: bold;
+			text-decoration: none;
+			color: #333;
+		}
+
+		.close:hover {
+			color: #06D85F;
+		}
+
+		.popup_content {
+			position: relative;
+			z-index: 100;
+			background: #fff;
+			overflow-y: auto;
+		}
+
+		.styledRadio, .styledCheckbox {
+			display: inline-block;
+			outline: 0;
+		}
+
+		.radio_label {
+			font-size: 150%;
+			line-height: 43px;
+			vertical-align: middle;
+			padding-left: 3px;
+			padding-right: 10px;
+		}
+
+		.checkbox_label {
+			font-size: 150%;
+			line-height: 43px;
+			vertical-align: middle;
+			padding-left: 10px;
+		}
+
+		.dropbtn {
+			text-align: center;
+			background-color: #9ECAED;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			border-top: 1px solid #999999;
+			border-left: 1px solid #999999;
+			border-right: 1px solid #999999;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px 10px 0 0;
+			outline: 0;
+			margin: 0;
+		}
+
+		.dropbtn_ie {
+			text-align: center;
+			background-color: transparent;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px 10px 0 0;
+			z-index: 5;
+			overflow: hidden;
+		}
+
+		.dropdown_container {
+			position: absolute;
+			visibility: hidden;
+			overflow-x: hidden;
+			overflow-y: auto;
+			/*width: 100%;*/
+			z-index: 20;
+			border: 1px solid black;
+			background-color: #f9f9f9;
+		}
+
+		.dropdown-content {
+			/*display: none;*/
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			/*overflow: auto;*/
+			outline: none;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		.range_container_css {
+			margin: 10px auto 20px auto;
+			position: relative;
+			height: 45px;
+			font-size: 0px;
+			cursor: default;
+		}
+
+		.range_container_ie6_7_css {
+			position: relative;
+			height: 45px;
+			font-size: 0px;
+			cursor: default;
+		}
+
+		.range_container_center_ie6_7_css {
+			text-align: center;
+			padding: 10px 0px 20px 0px;
+		}
+
+		.slider_guide_css {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 30%;
+		}
+
+		.slider_guide_enabled_css {
+			border-left: 1px solid gray;
+			border-top: 1px solid gray;
+			border-right: 1px solid white;
+			border-bottom: 1px solid white;
+			background: silver;
+		}
+
+		.slider_guide_disabled_css {
+			background-color: #EBEBE4;
+			border: 1px solid #EBEBE4;
+		}
+
+		.slider_css {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 30px;
+			height: 100%;
+			font-size: 15px;
+		}
+
+		.slider_enabled_css {
+			border: 1px solid gray;
+			background: #EBEBEB;
+		}
+
+		.slider_disabled_css {
+			background-color: #EBEBE4;
+			border: 1px solid #EBEBE4;
+		}
+
+		.range_value_enabled_css {
+			color: #000000;
+		}
+
+		.range_value_disabled_css {
+			color: #CCCCCC;
+		}
+
+		ul { padding: 0px; margin: 0px; }
+
+		#tabs { font-family: Verdana, sans-serif; font-size: 14px; }
+
+		.li_tab {
+			list-style: none;
+			float: left;
+			width: 150px;
+			height: 35px;
+
+			background-color: #dedede;
+			border-right: 1px solid #999;
+			border-left: 1px solid #999;
+			border-top: 1px solid #999;
+			-webkit-border-radius: 10px 10px 0 0;
+			-moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+		}
+
+		.li_tab_ie {
+			list-style: none;
+			float: left;
+			width: 150px;
+			height: 35px;
+
+			border-color: black;
+			filter: chroma(color=black);
+			border-right: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-top: 1px solid transparent;
+			background-color: transparent;
+		}
+
+		.li_tab_sep {
+			list-style: none;
+			float: left;
+			width: 5px;
+			height: 35px;
+			line-height: 35px;
+			border-bottom: 1px solid #999;
+		}
+
+		.a_tab {
+			-webkit-border-radius: 10px 10px 0 0;
+			-moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+
+			background-color: #dedede;
+			color: #222;
+			font-weight: bold;
+			text-decoration: none;
+			width: 150px;
+			height: 35px;
+			display: block;
+			float: left;
+			line-height: 35px;
+			text-align: center;
+			outline: 0;
+		}
+
+		.a_tab_ie {
+			-webkit-border-radius: 10px 10px 0 0;
+			-moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+
+			background-color: transparent;
+			color: #222;
+			font-weight: bold;
+			text-decoration: none;
+			width: 150px;
+			height: 35px;
+			display: block;
+			float: left;
+			line-height: 35px;
+			text-align: center;
+			outline: 0;
+		}
+
+		#container_tabs {
+			height: 400px;
+			overflow: hidden;
+			border-left:1px solid #999;
+			border-right:1px solid #999;
+			border-bottom:1px solid #999;
+		}
+
+		#container_tabs div.content {
+			color: #222;
+			font-family: Verdana;
+			font-size: 12px;
+			background-color: #efefef;
+			padding: 25px;
+			height: 350px;
+		}
+
+	</style>
+
+	<!--<script src="js/jquery/jquery-1.12.4.js"></script>-->
+
+        <script src="js/jsnutslib.min.js"></script>
+        <!--<script src="js/demoform.min.js"></script>-->
+        
+	<!--<script src="js/jsnutsGlobals.js"></script>
+	<script src="js/jsnutsUtils.js"></script>
+	<script src="js/jsnutsObject.js"></script>
+	<script src="js/jsnutsWindow.js"></script>
+	<script src="js/jsnutsDocument.js"></script>
+	<script src="js/jsnutsElement.js"></script>
+	<script src="js/jsnutsVML.js"></script>
+	<script src="js/jsnutsInput.js"></script>
+	<script src="js/jsnutsInputtext.js"></script>
+	<script src="js/jsnutsInputtext.html5.js"></script>
+	<script src="js/jsnutsImage.js"></script>
+	<script src="js/jsnutsTextarea.js"></script>
+	<script src="js/jsnutsTextarea.html5.js"></script>
+	<script src="js/jsnutsDropdown.js"></script>
+	<script src="js/jsnutsCombo.js"></script>
+	<script src="js/jsnutsInputtextTime.js"></script>
+	<script src="js/jsnutsCalendar.js"></script>
+	<script src="js/jsnutsInputtextDate.js"></script>
+	<script src="js/jsnutsInputRadio.js"></script>
+	<script src="js/jsnutsInputRadios.js"></script>
+	<script src="js/jsnutsInputCheckbox.js"></script>
+	<script src="js/jsnutsSlider.js"></script>
+	<script src="js/jsnutsSlider.mobile.js"></script>
+	<script src="js/jsnutsTabbedpane.js"></script>
+	<script src="js/jsnutsButton.js"></script>
+	<script src="js/jsnutsPopup.js"></script>-->
+
+	<script type="text/javascript">
+
+		var jsnutsW = new jsnutsWindow();
+		var jsnutsE = new jsnutsElement();
+		var myUtils = new jsnutsUtils();
+
+		var formDivider = 0.5;
+		var browserMobile = false;
+		var my_input_text = null;
+		var my_input_text2 = null;
+		var my_image = null;
+		var my_textarea = null;
+		var my_dropdown = null;
+		var my_combo = null;
+		var my_input_text_time = null;
+		var my_input_text_date = null;
+		var my_radiobuttons = null;
+		var my_radiobuttons_container = null;
+		var my_checkboxes = null;
+		var my_slider = null;
+		var my_tabbed_pane = null;
+		var my_button = null;
+		var my_button_combo = null;
+		var my_button_cal = null;
+		var my_popup = null;
+		var my_darklayer = null;
+
+		function setupInputTextObject(params) {
+			if(!my_input_text) {
+				my_input_text = new jsnutsInputtext('myinputtext');
+				my_input_text2 = new jsnutsInputtext('myinputtext2');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_input_text.addClass('input_class_ie');
+					my_input_text.setVmlOn();
+					my_input_text.setRadii(5);
+					my_input_text.setBlur(10);
+					my_input_text2.addClass('input_class_ie');
+					my_input_text2.setVmlOn();
+					my_input_text2.setRadii(5);
+					my_input_text2.setBlur(10);
+					my_input_text2.setShadowOn();
+                                        if(jsnutsGlobals.curBrowser == 'IE7') {
+                                            jsnutsE.findById('div_myinputtext').setStyle('position','relative');
+                                            jsnutsE.findById('div_myinputtext').setStyle('z-index','4');
+                                        }                                        
+				}else {
+					my_input_text.addClass('input_class');
+					my_input_text2.addClass('input_class input_class_shadow');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_input_text.initUI();
+				my_input_text.initEvents();
+				my_input_text2.initUI();
+				my_input_text2.initEvents();
+
+                                if(jsnutsGlobals.curBrowser == 'IE7') {
+                                    my_input_text.reposition();
+                                    my_input_text2.reposition();
+                                }
+			}
+		}
+
+		function setupImageObject(params) {
+			if(!my_image) {
+				my_image = new jsnutsImage('myimage','./images/image.jpg');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_image.addClass('image_class');
+					my_image.setVmlOn();
+					my_image.setRadii(5);
+				}else {
+					my_image.addClass('image_class');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_image.initUI();
+				my_image.initEvents();
+			}
+		}
+
+		function setupTextareaObject(params) {
+			if(!my_textarea) {
+				my_textarea = new jsnutsTextarea('mytextarea');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_textarea.addClass('input_class_ie textarea_class');
+					my_textarea.setVmlOn();
+					my_textarea.setRadii(5);
+					my_textarea.setBlur(10);
+                                        if(jsnutsGlobals.curBrowser == 'IE7') {
+                                            jsnutsE.findById('div_mytextarea').setStyle('position','relative');
+                                            jsnutsE.findById('div_mytextarea').setStyle('z-index','4');
+                                        }                                        
+				}else {
+					my_textarea.addClass('input_class textarea_class');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_textarea.initUI();
+				my_textarea.initEvents();
+
+                                if(jsnutsGlobals.curBrowser == 'IE7') {
+                                    my_textarea.reposition();
+                                }
+			}
+		}
+
+		function setupDropdownObject(params) {
+			if(!my_dropdown) {
+				my_dropdown = new jsnutsDropdown(
+					'mydropdown',
+					'mydropdown_button',
+					'mydropdown_container');
+
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_dropdown.getDropbtn().addClass('dropbtn_ie');
+					my_dropdown.setVmlOn();
+					my_dropdown.setRadii(10); // o 5
+					my_dropdown.setBlur(10);
+				}else {
+					my_dropdown.getDropbtn().addClass('dropbtn');
+				}
+
+				var dropdown_options = Array(6);
+				for(var i = 0;i < dropdown_options.length;i++) {
+					dropdown_options[i] = [i,myUtils.padLeft(Math.floor((Math.random() * 1000)) + 1,6)];
+				}
+				my_dropdown.setOptions(dropdown_options);
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_dropdown.initUI();
+				my_dropdown.initEvents();
+			}
+		}
+
+		function setupComboObject(params) {
+			if(!my_combo) {
+				my_combo = new jsnutsCombo(
+					'mycombo_inputtext',
+					'mycombo',
+					'mycombo_container');
+
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_combo.addClass('input_class_ie');
+					my_combo.setVmlOn();
+					my_combo.setRadii(5); // o 5
+					my_combo.setBlur(10);
+				}else {
+					my_combo.addClass('input_class');
+				}
+
+				var combo_options = Array(6);
+				for(var i = 0;i < combo_options.length;i++) {
+					combo_options[i] = [i,myUtils.padLeft(Math.floor((Math.random() * 1000)) + 1,6)];
+				}
+				my_combo.setOptions(combo_options);
+				my_combo.setComboButton(my_button_combo);
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_combo.initUI();
+				my_combo.initEvents();
+				my_combo.adjComboButton();
+			}
+		}
+
+		function setupInputTextTimeObject(params) {
+			if(!my_input_text_time) {
+				my_input_text_time = new jsnutsInputtextTime('myinputtext_time');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_input_text_time.addClass('input_class_ie');
+					my_input_text_time.setVmlOn();
+					my_input_text_time.setRadii(5);
+					my_input_text_time.setBlur(10);
+                                        
+                                        if(jsnutsGlobals.curBrowser == 'IE7') {
+                                            jsnutsE.findById('div_myinputtexttime').setStyle('position','relative');
+                                            jsnutsE.findById('div_myinputtexttime').setStyle('z-index','4');
+                                        }                                        
+				}else {
+					my_input_text_time.addClass('input_class');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_input_text_time.initUI();
+				my_input_text_time.initEvents();
+                                
+                                if(jsnutsGlobals.curBrowser == 'IE7') {
+                                    my_input_text_time.reposition();
+                                }
+			}
+		}
+
+		function setupInputTextDateObject(params) {
+			if(!my_input_text_date) {
+				my_input_text_date = new jsnutsInputtextDate(
+					'myinputtext_date',
+					'mycalendar',
+					'mycalendar_monthyear',
+					'mycalendar_daysofweek',
+					'mycalendar_days',
+					'a_calendar_previous',
+					'a_calendar_next');
+
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_input_text_date.addClass('input_class_ie');
+					my_input_text_date.setVmlOn();
+					my_input_text_date.setRadii(5);
+					my_input_text_date.setBlur(10);
+				}else {
+					my_input_text_date.addClass('input_class');
+				}
+				my_input_text_date.setCalButton(my_button_cal);
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_input_text_date.initUI();
+				my_input_text_date.initEvents();
+				my_input_text_date.adjCalButton();
+			}
+		}
+
+		function setupButtonCalObject(params) {
+			if(!my_button_cal) {
+				my_button_cal = new jsnutsButton('myinputtext_date_button');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_button_cal.addClass('button_class_ie');
+					my_button_cal.setVmlOn();
+					my_button_cal.setRadii(10);
+				}else {
+					my_button_cal.addClass('button_class');
+				}
+			}
+			//if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+			//	my_button_cal.initUI();
+			//	my_button_cal.initEvents();
+			//}
+		}
+
+		function setupButtonComboObject(params) {
+			if(!my_button_combo) {
+				my_button_combo = new jsnutsButton('mycombo_button');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_button_combo.addClass('button_class_ie');
+					my_button_combo.setVmlOn();
+					my_button_combo.setRadii(10);
+				}else {
+					my_button_combo.addClass('button_class');
+				}
+			}
+			//if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+			//	my_button_combo.initUI();
+			//	my_button_combo.initEvents();
+			//}
+		}
+
+		function setupRadiobuttonObjects(params) {
+			if(!my_radiobuttons) {
+				my_radiobuttons = [new jsnutsInputRadio('ex1_a'),new jsnutsInputRadio('ex1_b'),new jsnutsInputRadio('ex1_c')];
+				my_radiobuttons_container = new jsnutsInputRadios();
+				for(var i = 0;i < my_radiobuttons.length;i++) {
+					my_radiobuttons[i].setContainer(my_radiobuttons_container);
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				for(var i = 0;i < my_radiobuttons.length;i++) {
+					my_radiobuttons[i].initUI();
+					my_radiobuttons[i].initEvents();
+				}
+			}
+		}
+
+		function setupCheckboxObjects(params) {
+			if(!my_checkboxes) {
+				my_checkboxes = [new jsnutsInputCheckbox('ex2_a'),new jsnutsInputCheckbox('ex2_b'),new jsnutsInputCheckbox('ex2_c')];
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				for(var i = 0;i < my_checkboxes.length;i++) {
+					my_checkboxes[i].initUI();
+					my_checkboxes[i].initEvents();
+				}
+			}
+		}
+
+		function setupSliderObject(params) {
+			if(!my_slider) {
+				if(typeof params !== 'undefined' && typeof params.browserMobile !== 'undefined') {
+					if(!params.browserMobile) {
+						my_slider = new jsnutsSlider(
+							1,100,								// range min,max
+							(jsnutsE.findById('myform').width() * formDivider *
+								((!browserMobile) ? (1.5) : (0.8))),			// larghezza slider
+							(jsnutsE.findById('myform').width() * formDivider *
+								((!browserMobile) ? (1.5) : (0.8))),			// larghezza display valore
+							'range_container',						// DIV contenitore
+							'slider_guide',							// DIV guida
+							'slider',							// DIV slider
+							'range_value'							// DIV valore
+						);
+					}else {
+						my_slider = new jsnutsSliderMobile(
+							1,100,								// range min,max
+							(jsnutsE.findById('myform').width() * formDivider *
+								((!browserMobile) ? (1.5) : (0.8))),			// larghezza slider
+							(jsnutsE.findById('myform').width() * formDivider *
+								((!browserMobile) ? (1.5) : (0.8))),			// larghezza display valore
+							'range_container',						// DIV contenitore
+							'slider_guide',							// DIV guida
+							'slider',							// DIV slider
+							'range_value'							// DIV valore
+						);
+					}
+				}
+				if(jsnutsGlobals.curBrowser != 'IE6' && jsnutsGlobals.curBrowser != 'IE7') {
+					my_slider.jsneRangec.addClass('range_container_css');
+				}else {
+					var jsnercIE6_7 = new jsnutsElement().detachOff();
+                                        jsnercIE6_7.findById('range_container_center_ie6_7').addClass('range_container_center_ie6_7_css');
+					my_slider.jsneRangec.addClass('range_container_ie6_7_css');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_slider.initUI();
+				my_slider.initEvents();
+			}
+		}
+
+		function setupTabbedPaneObject(params) {
+			if(!my_tabbed_pane) {
+				my_tabbed_pane = new jsnutsTabbedpane(
+					'tabs',
+					'border_tab_top',
+					'container_tabs',
+					'myform');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_tabbed_pane.setVmlOn();
+					my_tabbed_pane.setRadii(10); // o 5
+					my_tabbed_pane.setBlur(10);
+					var jsne = new jsnutsElement().detachOff();
+					jsne.findById('tabs');
+					jsne.forEach(jsne.findByIdTag('li'),function(liobj,index) {
+						liobj.detachOff();
+						if(liobj.getClassName() != 'li_tab_sep') liobj.addClass('li_tab_ie');
+						liobj.forEach(liobj.findByTagel('a'),function(aobj,index2) {
+							aobj.detachOff();
+							aobj.addClass('a_tab_ie');
+						});
+					});
+					jsne.findById('a_tab1').setStyle('background-color','transparent');
+				}else {
+					var jsne = new jsnutsElement().detachOff();
+					jsne.findById('tabs');
+					jsne.forEach(jsne.findByIdTag('li'),function(liobj,index) {
+						liobj.detachOff();
+						if(liobj.getClassName() != 'li_tab_sep') liobj.addClass('li_tab');
+						liobj.forEach(liobj.findByTagel('a'),function(aobj,index2) {
+							aobj.detachOff();
+							aobj.addClass('a_tab');
+						});
+					});
+					jsne.findById('a_tab1').setStyle('background-color','#efefef');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_tabbed_pane.initUI();
+				my_tabbed_pane.initEvents();
+			}
+		}
+
+		function setupPopupObject(params) {
+			if(!my_popup) {
+				my_darklayer = new jsnutsElement();
+				my_darklayer.findById('darklayer').detachOff();
+				my_darklayer.addClass(((jsnutsGlobals.curBrowser != 'IE6' && jsnutsGlobals.curBrowser != 'IE7') ? ('darkClass') : ('darkClass_ie6_7')));
+				my_popup = new jsnutsPopup(
+					'popup1',
+					my_darklayer,
+					'Invia form',
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus rhoncus tortor. Maecenas nec felis consectetur, interdum nulla at, dapibus nulla. Morbi eget elementum magna, sit amet dictum nibh. Nullam vestibulum dolor ac convallis tincidunt. Praesent egestas auctor nunc, vel eleifend magna auctor vel. Maecenas euismod vestibulum dolor, eget semper est molestie a. Phasellus placerat odio eros, sit amet aliquam nunc mollis eget. Vestibulum vitae justo pulvinar, efficitur dolor ac, facilisis magna. Mauris ornare purus et commodo fringilla. Vivamus vel ligula sollicitudin, efficitur elit non, sollicitudin urna. Pellentesque a risus sed erat placerat iaculis. Pellentesque ultricies fermentum justo finibus euismod. Morbi elementum suscipit ligula, non tincidunt lacus interdum a. Maecenas mi velit, posuere ullamcorper nulla eget, pretium viverra ex. Cras suscipit nunc urna, ac sodales augue ultrices eu. Nam fringilla suscipit dolor at finibus. Curabitur felis quam, eleifend et condimentum ac, consectetur ut metus. Donec nibh nisi, pulvinar sed tortor at, convallis condimentum elit. Sed vulputate justo eget arcu mattis, sit amet maximus lorem pulvinar. Integer justo dolor, porta sed justo at, vehicula molestie nulla. Suspendisse et maximus velit. Aenean eget neque finibus, blandit metus eu, tincidunt felis. Fusce finibus vulputate eros, eu varius arcu porttitor venenatis. Cras sit amet nisl in velit sagittis consequat id efficitur eros. In semper velit neque, quis condimentum sapien accumsan id. Etiam sollicitudin ultrices massa. Morbi feugiat auctor magna ac imperdiet. Proin sed augue luctus, laoreet urna eget, imperdiet purus. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut vel vulputate urna. Vestibulum imperdiet mi at mi feugiat consectetur.',
+					((!browserMobile) ? (jsnutsGlobals.nwindow.width() * 0.5) : (jsnutsGlobals.nwindow.width() * 0.7)),
+					((!browserMobile) ? (jsnutsGlobals.nwindow.height() * 0.5) : (jsnutsGlobals.nwindow.width() * 0.7)));
+
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7') {
+						my_popup.addClass('popup_ie6_7');
+                                                my_popup.setStyle('position','absolute');
+                                                jsnutsE.findByClassTagId('popup_title','div','popup1')[0].width(jsnutsGlobals.nwindow.width() * 0.5);
+                                        }
+					else
+						my_popup.addClass('popup_ie8');
+					my_popup.setVmlOn();
+					my_popup.setRadii(10);
+				}else {
+					my_popup.addClass('popup');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_popup.initUI();
+                                my_darklayer.height(jsnutsGlobals.nwindow.height()); // DEVADD
+				my_popup.initEvents();
+				my_button.addEvent('click',function() {
+					my_popup.show();
+				});
+			}
+		}
+
+		function setupSubmitbuttonObject(params) {
+			if(!my_button) {
+				my_button = new jsnutsButton('submit_button');
+				if(jsnutsGlobals.curBrowser == 'IE6' || jsnutsGlobals.curBrowser == 'IE7' || jsnutsGlobals.curBrowser == 'IE8') {
+					my_button.addClass('submit_class_ie');
+					my_button.setVmlOn();
+					my_button.setRadii(10);
+				}else {
+					my_button.addClass('submit_class');
+				}
+			}
+			if((typeof params !== 'undefined' && !params.createAndSet) || typeof params === 'undefined') {
+				my_button.initUI();
+				my_button.initEvents();
+			}
+		}
+
+		function setupInputTextObjectHTML5(params) {
+			if(!my_input_text) {
+                                if(jsnutsGlobals.curBrowser != 'IE9') {
+                                    my_input_text = new jsnutsInputtextHtml5('myinputtext');
+				    my_input_text2 = new jsnutsInputtextHtml5('myinputtext2');
+				}
+                                else {
+                                    my_input_text = new jsnutsInputtext('myinputtext');
+				    my_input_text2 = new jsnutsInputtext('myinputtext2');
+				}
+				my_input_text.addClass('input_class');
+				my_input_text.initUI();
+				my_input_text.initEvents();
+				my_input_text2.addClass('input_class');
+				my_input_text2.setShadowOn();
+				my_input_text2.initUI();
+				my_input_text2.initEvents();
+			}
+		}
+
+		function setupTextareaObjectHTML5(params) {
+			if(!my_textarea) {
+                                if(jsnutsGlobals.curBrowser != 'IE9')
+                                    my_textarea = new jsnutsTextareaHtml5('mytextarea');
+                                else
+                                    my_textarea = new jsnutsTextarea('mytextarea');
+				my_textarea.addClass('input_class textarea_class');
+				my_textarea.initUI();
+				my_textarea.initEvents();
+			}
+		}
+
+		function initObjects(params) {
+			if(!myUtils.isMobile()) {
+				if(!myUtils.stdHTML5()) {
+					setupInputTextObject(params);
+					setupImageObject(params);
+					setupTextareaObject(params);
+					setupDropdownObject(params);
+					setupButtonComboObject(params);
+					setupComboObject(params);
+					setupInputTextTimeObject(params);
+					setupButtonCalObject(params);
+					setupInputTextDateObject(params);
+					setupRadiobuttonObjects(params);
+					setupCheckboxObjects(params);
+					setupSliderObject(params);
+					setupTabbedPaneObject(params);
+					setupPopupObject(params);
+					setupSubmitbuttonObject(params);
+				}else {
+					setupInputTextObjectHTML5(params);
+					setupImageObject(params);
+					setupTextareaObjectHTML5(params);
+					setupDropdownObject(params);
+					setupButtonComboObject(params);
+					setupComboObject(params);
+					setupInputTextTimeObject(params);
+					setupButtonCalObject(params);
+					setupInputTextDateObject(params);
+					setupRadiobuttonObjects(params);
+					setupCheckboxObjects(params);
+					setupSliderObject(params);
+					setupTabbedPaneObject(params);
+					setupPopupObject(params);
+					setupSubmitbuttonObject(params);
+				}
+			// mobile
+			}else {
+				if(typeof params !== 'undefined')
+                                    params.mobile = true;
+				setupInputTextObjectHTML5(params);
+				setupImageObject(params);
+				setupTextareaObjectHTML5(params);
+				setupDropdownObject(params); 		// mobile?
+				setupButtonComboObject(params);
+				setupComboObject(params);		// mobile?
+				setupInputTextTimeObject(params);
+				setupButtonCalObject(params);
+				setupInputTextDateObject(params);	// mobile?
+				setupRadiobuttonObjects(params);
+				setupCheckboxObjects(params);
+				setupSliderObject(params);
+				setupTabbedPaneObject(params);		// mobile ?
+				setupPopupObject(params);		// mobile ?
+				setupSubmitbuttonObject(params);
+			}
+		}
+
+	</script>
+	<script type="text/javascript">
+
+		docReady(function() {
+
+try {
+			browserMobile = myUtils.isMobile();
+			formDivider = ((!browserMobile) ? (0.5) : (0.99));
+
+			//myUtils.dbgPreparePans('leftpan');
+
+			myUtils.browserDetect();
+                        myUtils.mobileDetect();
+			myUtils.HTML5Detect();
+
+			jsnutsGlobals.createWindow();
+			jsnutsGlobals.createDocument();
+
+			jsnutsE.setCacheOn(10);
+
+			jsnutsE.findById('myform').width(jsnutsW.widthnsb() * formDivider);
+
+			// eseguire qua prima del setup grafico della form (aggiunge, fra le
+			// altre cose, le classi su cui si basa il motore grafico per disegnare
+			// l'interfaccia)
+			initObjects({createAndSet:true,browserMobile:browserMobile});
+
+			// unica colonna, mobile
+			if(browserMobile) {
+				jsnutsE.findById('div_myinputtext').removeAttribute('style');
+				jsnutsE.findById('div_mytextarea').removeAttribute('style');
+				jsnutsE.findById('div_mydropdown').removeAttribute('style');
+				jsnutsE.findById('div_mycombo').removeAttribute('style');
+				jsnutsE.findById('div_myinputtexttime').removeAttribute('style');
+				jsnutsE.findById('div_myinputtextdate').removeAttribute('style');
+				jsnutsE.findById('div_myradiobutton').removeAttribute('style');
+				jsnutsE.findById('div_mycheckbox').removeAttribute('style');
+				jsnutsE.findById('div_submit_button').removeAttribute('style');
+			}
+                        
+			jsnutsE.findById('div_myinputtext').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (2) : (0)));
+			jsnutsE.findById('div_myinputtext').findByIdTag('input')[0].width(
+				((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (4) : (2))) -
+				((jsnutsE.findById('div_myinputtext').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true})) > 0 ?
+				(jsnutsE.findById('div_myinputtext').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true}) * 2) :
+				(jsnutsE.findById('div_myinputtext').findByIdTag('input')[0].getStyle('padding-left',{styleToInt:true}) * 2)));
+			jsnutsE.findById('div_myinputtext').findByIdTag('input')[1].width(
+				((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (4) : (2))) -
+				((jsnutsE.findById('div_myinputtext').findByIdTag('input')[1].getStyle('margin-left',{styleToInt:true})) > 0 ?
+				(jsnutsE.findById('div_myinputtext').findByIdTag('input')[1].getStyle('margin-left',{styleToInt:true}) * 2) :
+				(jsnutsE.findById('div_myinputtext').findByIdTag('input')[1].getStyle('padding-left',{styleToInt:true}) * 2)));
+
+			// posiziona l'immagine ai piedi della textarea
+			//var div_mytextarea_textarea_height = jsnutsE.findById('div_mytextarea').height();
+			var div_mytextarea_textarea_height =
+				jsnutsE.findById('div_mytextarea').findByIdTag('label')[0].height() +
+				jsnutsE.findById('div_mytextarea').findByIdTag('textarea')[0].height() +
+				((my_textarea.getStyle('margin-left',{styleToInt:true}) > 0) ?
+				(my_textarea.getStyle('margin-left',{styleToInt:true}) * 2) :
+				(my_textarea.getStyle('padding-left',{styleToInt:true})) * 2);
+
+			var div_myinputtext_labels = jsnutsE.findById('div_myinputtext').findByIdTag('label');
+			var div_myinputtext_labels_height = 0;
+			for(var l = 0;l < div_myinputtext_labels.length;l++)
+				div_myinputtext_labels_height += div_myinputtext_labels[l].height();
+			var total_adj_height =
+				div_myinputtext_labels_height +
+				my_input_text.height() +
+					((my_input_text.getStyle('margin-left',{styleToInt:true}) > 0) ?
+					(my_input_text.getStyle('margin-left',{styleToInt:true}) * 2) :
+					(my_input_text.getStyle('padding-left',{styleToInt:true})) * 2) +
+				my_input_text2.height() +
+					((my_input_text2.getStyle('margin-left',{styleToInt:true}) > 0) ?
+					(my_input_text2.getStyle('margin-left',{styleToInt:true}) * 2) :
+					(my_input_text2.getStyle('padding-left',{styleToInt:true})) * 2) +
+				5;
+			var img_h = parseInt(div_mytextarea_textarea_height - total_adj_height -
+				((jsnutsGlobals.curBrowser != 'IE8') ? (6) : (0)));
+			var img_w = parseInt(img_h * 1.78);
+			jsnutsE.findById('div_myinputtext').findByIdTag('img')[0].height(img_h);
+			jsnutsE.findById('div_myinputtext').findByIdTag('img')[0].width(img_w);
+
+			jsnutsE.findById('div_mytextarea').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (2) : (0)));
+			jsnutsE.findById('div_mytextarea').findByIdTag('textarea')[0].width(
+				((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (4) : (2))) -
+				((jsnutsE.findById('div_mytextarea').findByIdTag('textarea')[0].getStyle('margin-left',{styleToInt:true})) > 0 ?
+				(jsnutsE.findById('div_mytextarea').findByIdTag('textarea')[0].getStyle('margin-left',{styleToInt:true}) * 2) :
+				(jsnutsE.findById('div_mytextarea').findByIdTag('textarea')[0].getStyle('padding-left',{styleToInt:true}) * 2)));
+
+			jsnutsE.findById('div_mydropdown').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (2) : (0)));
+			jsnutsE.findById('div_mydropdown').findByIdTag('button')[0].width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (2) : (0)));
+
+			jsnutsE.findById('div_mycombo').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (2) : (0)));
+			jsnutsE.findById('div_mycombo').findByIdTag('input')[0].width(
+				((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (4) : (2))) -
+				((jsnutsE.findById('div_mycombo').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true})) > 0 ?
+				(jsnutsE.findById('div_mycombo').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true}) * 2) :
+				(jsnutsE.findById('div_mycombo').findByIdTag('input')[0].getStyle('padding-left',{styleToInt:true}) * 2)));
+
+			jsnutsE.findById('div_myinputtexttime').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - 2);
+			jsnutsE.findById('div_myinputtexttime').findByIdTag('input')[0].width(
+				((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (4) : (2))) -
+				((jsnutsE.findById('div_myinputtexttime').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true})) > 0 ?
+				(jsnutsE.findById('div_myinputtexttime').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true}) * 2) :
+				(jsnutsE.findById('div_myinputtexttime').findByIdTag('input')[0].getStyle('padding-left',{styleToInt:true}) * 2)));
+
+			jsnutsE.findById('div_myinputtextdate').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (2) : (0)));
+			jsnutsE.findById('div_myinputtextdate').findByIdTag('input')[0].width(
+				((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - ((!browserMobile) ? (4) : (2))) -
+				((jsnutsE.findById('div_myinputtextdate').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true})) > 0 ?
+				(jsnutsE.findById('div_myinputtextdate').findByIdTag('input')[0].getStyle('margin-left',{styleToInt:true}) * 2) :
+				(jsnutsE.findById('div_myinputtextdate').findByIdTag('input')[0].getStyle('padding-left',{styleToInt:true}) * 2)));
+
+			jsnutsE.findById('div_myradiobutton').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - 2);
+			jsnutsE.findById('div_mycheckbox').width((jsnutsE.findById('myform').width() * ((!browserMobile) ? (formDivider) : (1))) - 2);
+
+			if(browserMobile) {
+				var formWidthPart = (jsnutsE.findById('myform').width() / 3) - 10;
+				jsnutsE.findById('tabs');
+				jsnutsE.forEach(jsnutsE.findByIdTag('li'),function(liobj,index) {
+					liobj.detachOff();
+					if(liobj.getClassName() != 'li_tab_sep') liobj.width(formWidthPart);
+				});
+				jsnutsE.findById('tabs');
+				jsnutsE.forEach(jsnutsE.findByIdTag('a'),function(aobj,index) {
+					aobj.width(formWidthPart);
+				});
+			}
+
+			jsnutsE.findById('div_submit_button').width(jsnutsE.findById('myform').width());
+			jsnutsE.findById('div_submit_button').findByIdTag('input')[0].width(jsnutsE.findById('myform').width());
+
+			// rieseguire qua dopo il setup grafico della form
+			// esegue l'initUI ed events solamente, gli oggetti
+			// sono stati già creati e settati
+			initObjects();
+                        
+			// evita l'apertura del dropdown (l'enter invia un click), lo rifiuta e genera un submit()
+			// ma solo se non mi trovo dentro la textarea
+			jsnutsE.findById('myform').detachOff().addEvent('keypress',function(e) {
+
+				//alert(document.activeElement); // OK anche su IE8
+
+				// elem === document.activeElement && ( elem.type || elem.href ); // se ha il fuoco?
+				if(typeof document.activeElement.id !== 'undefined' && document.activeElement.id == 'mytextarea')
+					return;
+
+				var keypressed = (typeof e.which !== 'undefined') ? e.which : e.keyCode;
+				if(keypressed == 13) {
+					if(typeof e.preventDefault !== 'undefined')
+						e.preventDefault();
+					else {
+				            window.event.returnValue = false;
+				            window.event.cancelBubble = true;
+					}
+					my_button.callEventsFn('click');
+				}
+
+			});
+
+			jsnutsE.findById('myform').setStyle('visibility','visible');
+			jsnutsE.findById('myinputtext').getDOMEl().focus();
+                        
+			jsnutsE.setCacheOff();
+
+			new jsnutsWindow().addEvent('resize',function(e) {
+				if(typeof my_input_text.reposition !== 'undefined' &&
+					typeof my_textarea.reposition !== 'undefined') {
+					my_input_text.reposition();
+					my_textarea.reposition();
+				}
+			});
+
+			// chrome
+			//console.log(window.performance.memory);
+
+			// OK
+			//my_input_text.disable();
+			//my_input_text.enable();
+                        
+                        }catch(e) { alert(e); }
+
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="leftpan">
+
+<form id="myform" action="#" style="margin:0 auto; border:1px solid black; visibility:hidden;" onsubmit="return false;">
+	<div id="div_myinputtext" style="float:left;">
+		<div><label class="column_header" for="myinputtext">Inserisci testo:</label></div>
+		<div><input id="myinputtext" name="myinputtext" type="text" value="" /></div>
+		<div><label class="column_header" for="myinputtext2">Inserisci testo:</label></div>
+		<div><input id="myinputtext2" name="myinputtext2" type="text" value="" /></div>
+		<div style="text-align:center;"><label class="column_header">Img bordi arrotondati:</label></div>
+		<div style="text-align:center; margin-top:5px;"><img id="myimage" class="image_class" src="./images/image.jpg" /></div>
+	</div>
+	<div id="div_mytextarea" style="float:right;">
+		<div><label class="column_header" for="mytextarea">Inserisci testo:</label></div>
+		<div><textarea id="mytextarea" name="mytextarea" rows="10"></textarea></div>
+	</div>
+	<div style="clear:both;"></div>
+	<div id="div_mydropdown" style="float:left;">
+		<div class="col_header_container" style="float:left;"><label class="column_header" for="mydropdown_button">Seleziona:</label></div>
+		<div style="clear:both;"></div>
+		<button id="mydropdown_button" onselectstart="return false;">Clicca per selezionare</button>
+		<div id="mydropdown_container" class="dropdown_container">
+			<div id="mydropdown" class="dropdown-content"></div>
+		</div>
+	</div>
+	<div id="div_mycombo" style="float:right; text-align:left;">
+		<div class="col_header_container" style="float:left;"><label class="column_header" for="mycombo_inputtext">Inserisci testo:</label></div>
+                <input style="float:left;" id="mycombo_inputtext" name="mycombo_inputtext" type="text" value="" />
+                <button style="float:left;" id="mycombo_button">*</button>
+		<div id="mycombo_container" class="dropdown_container">
+			<div id="mycombo" class="dropdown-content"></div>
+		</div>
+        	<div style="clear:both;"></div>
+	</div>
+	<div style="clear:both;"></div>
+	<div id="div_myinputtexttime" style="float:left;">
+		<div><label class="column_header" for="myinputtext_time">Inserisci ore e minuti:</label></div>
+                <div><input id="myinputtext_time" name="myinputtext_time" type="text" value="" /></div>
+                <div style="clear:both;"></div>
+	</div>
+	<div id="div_myinputtextdate" style="float:right; text-align:left;">
+		<div><label class="column_header" for="myinputtext_date">Inserisci data:</label></div>
+		<input style="float:left;" id="myinputtext_date" name="myinputtext_date" type="text" value="" />
+		<button style="float:left;" id="myinputtext_date_button">Cal</button>
+		<div style="clear:both;"></div>
+	</div>
+	<div style="clear:both;"></div>
+	<div id="div_myradiobutton" style="float:left;">
+		<div><label class="column_header">Seleziona:</label></div>
+		<div>
+			<div style="float:left;"><input type="radio" name="ex1" id="ex1_a" value="A"></div>
+			<div style="float:left;"><label for="ex1_a" class="radio_label">A</label></div>
+			<div style="float:left;"><input type="radio" name="ex1" id="ex1_b" value="B" checked="checked"></div>
+			<div style="float:left;"><label for="ex1_b" class="radio_label">B</label></div>
+			<div style="float:left;"><input type="radio" name="ex1" id="ex1_c" value="C"></div>
+			<div style="float:left;"><label for="ex1_c" class="radio_label">C</label></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div id="div_mycheckbox" style="float:right;">
+		<div><label class="column_header">Seleziona:</label></div>
+		<div style="text-align:left;">
+			<div style="float:left;"><input type="checkbox" name="ex2_a" id="ex2_a" value="A"></div>
+			<div style="float:left;"><label for="ex2_a" class="checkbox_label">A</label></div>
+			<div style="clear:both;"></div>
+			<div style="float:left;"><input type="checkbox" name="ex2_b" id="ex2_b" checked="checked" value="B"></div>
+			<div style="float:left;"><label for="ex2_b" class="checkbox_label">B</label></div>
+			<div style="clear:both;"></div>
+			<div style="float:left;"><input type="checkbox" name="ex2_c" id="ex2_c" value="C"></div>
+			<div style="float:left;"><label for="ex2_c" class="checkbox_label">C</label></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<div id="div_myslider">
+		<div style="height:20px;"></div>
+		<div id="range_value" class="range_value_enabled_css" style="text-align:center; font-size:32px; margin:0 auto;">1</div>
+		<div id="range_container_center_ie6_7">
+			<div id="range_container" onselectstart="return false">
+				<div id="slider_guide" class="slider_guide_css slider_guide_enabled_css"></div>
+				<div id="slider" class="slider_css slider_enabled_css">&nbsp;&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<div style="height:20px;"></div>
+	<div id="div_mytabbedpane">
+		<ul id="tabs">
+			<li><a id="a_tab1" href="javascript:void(0);">Tab 1</a></li>
+			<li class="li_tab_sep"></li>
+			<li><a id="a_tab2" href="javascript:void(0);">Tab 2</a></li>
+			<li class="li_tab_sep"></li>
+			<li><a id="a_tab3" href="javascript:void(0);">Tab 3</a></li>
+		</ul>
+		<div id="border_tab_top" style="float:left; width:0px; border-bottom:1px solid #999; height:35px; line-height:35px;"></div>
+		<div style="clear:both;"></div>
+		<div id="container_tabs">
+		    <div id="tab1" class="content">
+		        <h2>Tab 1</h2>
+		        <p>Lorem ipsum dolor sit amet consectetuer ...</p>
+		    </div>
+		    <div id="tab2" class="content">
+		        <h2>Tab 2</h2>
+		        <p>Convallis elit tortor ut ante libero Aenean Maecenas ...</p>
+		    </div>
+		    <div id="tab3" class="content">
+		        <h2>Tab 3</h2>
+		        <p>Urna justo quam nunc urna sem facilisis nibh Curabitur tellus quis...</p>
+		    </div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	<div style="clear:both;"></div>
+	<div style="margin-top:10px;">&nbsp;</div>
+	<div id="div_submit_button">
+		<input id="submit_button" type="submit" value="Invia" />
+	</div>
+</form>
+
+</div>
+
+</body>
+</html>
+
+<div id="darklayer" style="display:none"></div>
+
+<div id="popup1" style="position:fixed; visibility:hidden; left:-10000px; top:-10000px;">
+	<div class="popup_title">
+		<div style="position:relative; float:left;"><h2></h2></div>
+		<div style="position:relative; float:right;" class="close"><a href="javascript:void(0);" class="close">&times;</a></div>
+		<div style="clear:both;"></div>
+	</div>
+	<div style="clear:both;"></div>
+	<div id="title_content_divider" style="height:10px;"></div>
+	<div class="popup_content"></div>
+</div>
+
+<div id="mycalendar" class="rTable" style="position:absolute; visibility:hidden; background-color:#FFF; left:-10000px; top:-10000px;">
+	<div class="rTableRow2">
+		<div style="float:left; width:14.7%;"><a id="a_calendar_previous" href="javascript:void(0);"><<</a></div>
+		<div style="float:left; width:14%;">&nbsp;</div>
+		<div id="mycalendar_monthyear" style="float:left; width:42%; font-weight:bold;"></div>
+		<div style="float:left; width:14%;">&nbsp;</div>
+		<div style="float:left; width:14.7%;"><a id="a_calendar_next" href="javascript:void(0);">>></a></div>
+	</div>
+	<div class="rTableRow3">
+		<div id="mycalendar_daysofweek"></div>
+	</div>
+	<div style="clear:both;"></div>
+	<div id="mycalendar_days"></div>
+	<div style="clear:both;"></div>
+</div>
